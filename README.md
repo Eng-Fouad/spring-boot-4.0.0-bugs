@@ -4,7 +4,7 @@ Run the dev environment with:
 ./gradles bootTestRun
 ```
 
-After starting the server, navigate to `http://localhost:5555/users?page_index=0&results_per_page=10`. The following error appears:
+1. After starting the server, navigate to `http://localhost:5555/users?page_index=0&results_per_page=10`. The following error appears:
 
 ```
 There was an unexpected error (type=Internal Server Error, status=500).
@@ -131,4 +131,10 @@ Caused by: org.springframework.beans.NotReadablePropertyException: Invalid prope
 	at tools.jackson.databind.ser.BeanPropertyWriter.serializeAsProperty(BeanPropertyWriter.java:564)
 	at tools.jackson.databind.ser.UnrolledBeanSerializer.serializeNonFiltered(UnrolledBeanSerializer.java:197)
 	... 101 more
+```
+
+2. Upon starting the server, this warning appears on the console:
+
+```
+o.s.aop.framework.CglibAopProxy          : Public final method [public final java.lang.Object tools.jackson.databind.ObjectMapper.readValue(tools.jackson.core.JsonParser,tools.jackson.core.type.ResolvedType) throws tools.jackson.core.JacksonException] cannot get proxied via CGLIB, consider removing the final marker or using interface-based JDK proxies.
 ```

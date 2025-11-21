@@ -6,15 +6,18 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
+import tools.jackson.databind.json.JsonMapper;
 
 @Service
 public class UsersServiceImpl implements UsersService {
 
 	private final UsersRepository usersRepository;
+	private final JsonMapper jsonMapper;
 
 	@Lazy
-	public UsersServiceImpl(UsersRepository usersRepository) {
+	public UsersServiceImpl(UsersRepository usersRepository, JsonMapper jsonMapper) {
 		this.usersRepository = usersRepository;
+		this.jsonMapper = jsonMapper;
 	}
 	
 	@Override
