@@ -1,0 +1,24 @@
+[versions]
+hibernate-plugin                                     = "7.1.6.Final"                             # https://plugins.gradle.org/plugin/org.hibernate.orm
+spring-boot                                          = "4.0.0"                                   # https://central.sonatype.com/artifact/org.springframework.boot/spring-boot-dependencies
+hibernate-commons-annotations                        = "7.0.3.Final"                             # https://central.sonatype.com/artifact/org.hibernate.common/hibernate-commons-annotations
+mssql-jdbc                                           = "13.2.1.jre11"                            # https://central.sonatype.com/artifact/com.microsoft.sqlserver/mssql-jdbc
+testcontainers                                       = "2.0.2"                                   # https://central.sonatype.com/artifact/org.testcontainers/testcontainers-bom
+azureSqlEdgeImage                                    = "mcr.microsoft.com/azure-sql-edge:1.0.7"  # https://learn.microsoft.com/en-us/azure/azure-sql-edge/release-notes
+
+[plugins]
+hibernate                                            = { id = "org.hibernate.orm", version.ref = "hibernate-plugin" }
+springboot                                           = { id = "org.springframework.boot", version.ref = "spring-boot" }
+
+[libraries]
+spring-boot-starter-web                              = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "spring-boot" }
+spring-boot-starter-json                             = { group = "org.springframework.boot", name = "spring-boot-starter-json", version.ref = "spring-boot" }
+spring-boot-starter-security                         = { group = "org.springframework.boot", name = "spring-boot-starter-security", version.ref = "spring-boot" }
+spring-boot-starter-validation                       = { group = "org.springframework.boot", name = "spring-boot-starter-validation", version.ref = "spring-boot" }
+spring-boot-starter-data-jpa                         = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+spring-boot-starter-test                             = { group = "org.springframework.boot", name = "spring-boot-starter-test", version.ref = "spring-boot" }
+spring-boot-starter-testcontainers                   = { group = "org.springframework.boot", name = "spring-boot-testcontainers", version.ref = "spring-boot" }
+spring-boot-starter-devtools                         = { group = "org.springframework.boot", name = "spring-boot-devtools", version.ref = "spring-boot" }
+hibernate-annotations                                = { group = "org.hibernate.common", name = "hibernate-commons-annotations", version.ref = "hibernate-commons-annotations" }
+mssql-jdbc                                           = { group = "com.microsoft.sqlserver", name = "mssql-jdbc", version.ref = "mssql-jdbc" }
+testcontainers-mssql                                 = { group = "org.testcontainers", name = "testcontainers-mssqlserver", version.ref = "testcontainers" }
